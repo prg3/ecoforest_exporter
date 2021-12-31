@@ -6,18 +6,16 @@ import (
 	"os"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	// "encoding/json"
-    "fmt"
+	"github.com/prometheus/client_golang/prometheus/promauto"
+
+	"fmt"
     "log"
 	"crypto/tls"
 	"strings"
 	"io"
 	"strconv"
 )
-
-
 
 func getData() {
 	interval := 10
@@ -79,8 +77,9 @@ func getData() {
 							if err != nil {
 								log.Fatal(err)
 							}
-							f := float32(int16(val)) / 10
+							f := float64(int16(val)) / 10
 							fmt.Println(fmt.Sprintf("%d:%d:%d - %f", tag[1],tag[2], i,  f))
+							setCounter(tag[0], tag[1], tag[2], tag[3], i, f)
 						}
 					}
 					// fmt.Println(strings.Split(ecoData[1],"&"))
@@ -92,12 +91,7 @@ func getData() {
 	}()
 }
 
-var (
-	brineIn = promauto.NewGauge(prometheus.GaugeOpts{
-		Name: "ecoforest_brine_input_gauge",
-		Help: "Temperature in C of the brine input temperature",
-	})
-)
+
 
 func recordMetrics() {
 	go func() {
