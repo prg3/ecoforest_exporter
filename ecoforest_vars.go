@@ -55,7 +55,7 @@ var dataPoints = []dataPoint{
 		function: 2002,
 		ini:      1,
 		reg:      39,
-		index:    4,
+		index:    5,
 		metric: promauto.NewGauge(prometheus.GaugeOpts{
 			Name: "ecoforest_production_input_gauge",
 			Help: "Temperature in C of the production input temperature",
@@ -66,7 +66,7 @@ var dataPoints = []dataPoint{
 		function: 2002,
 		ini:      1,
 		reg:      39,
-		index:    5,
+		index:    4,
 		metric: promauto.NewGauge(prometheus.GaugeOpts{
 			Name: "ecoforest_production_output_gauge",
 			Help: "Temperature in C of the production output temperature",
