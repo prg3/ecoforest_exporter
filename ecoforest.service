@@ -1,0 +1,10 @@
+[Unit]
+Description=EcoForest Exporter
+Requires=prometheus.service
+After=prometheus.service
+
+[Service]
+Environment=ECOFOREST_USER=user
+Environment=ECOFOREST_PASS=pass
+Environment=ECOFOREST_IP=ip
+ExecStart=/usr/local/bin/ecoforest_exporter
