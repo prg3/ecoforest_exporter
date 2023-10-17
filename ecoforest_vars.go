@@ -88,9 +88,9 @@ var dataPoints = []dataPoint{
 		function: 2002,
 		ini:      1,
 		reg:      39,
-		index:    9,
+		index:    12,
 		metric: promauto.NewGauge(prometheus.GaugeOpts{
-			Name: "ecoforest_dhw_outdoor_temperature_gauge",
+			Name: "ecoforest_outdoor_temperature_gauge",
 			Help: "Temperature in C of the external sensor",
 		}),
 	},
