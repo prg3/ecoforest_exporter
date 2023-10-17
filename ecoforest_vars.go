@@ -123,8 +123,8 @@ var dataPoints = []dataPoint{
 		reg:      29,
 		index:    23,
 		metric: promauto.NewGauge(prometheus.GaugeOpts{
-			Name: "ecoforest_brine_group_1_gauge",
-			Help: "Brine Group 1 Current",
+			Name: "ecoforest_production_group_1_gauge",
+			Help: "Production Group 1 Current",
 		}),
 	},
 	dataPoint{
@@ -134,8 +134,8 @@ var dataPoints = []dataPoint{
 		reg:      29,
 		index:    22,
 		metric: promauto.NewGauge(prometheus.GaugeOpts{
-			Name: "ecoforest_brine_group_2_gauge",
-			Help: "Brine Group 2 Current",
+			Name: "ecoforest_production_group_2_gauge",
+			Help: "Production Group 2 Current",
 		}),
 	},
 	dataPoint{
@@ -145,8 +145,8 @@ var dataPoints = []dataPoint{
 		reg:      29,
 		index:    21,
 		metric: promauto.NewGauge(prometheus.GaugeOpts{
-			Name: "ecoforest_brine_group_3_gauge",
-			Help: "Brine Group 3 Current",
+			Name: "ecoforest_production_group_3_gauge",
+			Help: "Production Group 3 Current",
 		}),
 	},
 	dataPoint{
@@ -156,8 +156,8 @@ var dataPoints = []dataPoint{
 		reg:      29,
 		index:    20,
 		metric: promauto.NewGauge(prometheus.GaugeOpts{
-			Name: "ecoforest_brine_group_4_gauge",
-			Help: "Brine Group 4 Current",
+			Name: "ecoforest_production_group_4_gauge",
+			Help: "Production Group 4 Current",
 		}),
 	},
 
