@@ -78,7 +78,7 @@ func getData() {
 								log.Fatal(err)
 							}
 							f := float64(int16(val)) / 10
-							fmt.Println(fmt.Sprintf("%d:%d:%d - %f", tag[1],tag[2], i,  f))
+							fmt.Println(fmt.Sprintf("%d:%d:%d:%d - %f", tag[1],tag[2],tag[3], i,  f))
 							setCounter(tag[0], tag[1], tag[2], tag[3], i, f)
 						}
 					}
